@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Trang lưu trữ & sáng tạo truyện, tin tức, drama" />
+        <meta name="author" content="Hiếu Deeptry" />
+        <meta property="og:image" content="https://automatemachine.github.io/HieuArticle/assets/img/portfolio-1.jpg"/>
+        <title>Trang chủ - Hiếu's Diary</title>
+        <script>window.onload = function() {
+           get_news_and_official_stories();
+        }
+        </script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">Đầu trang</a></li>
+                <li class="sidebar-nav-item"><a href="/#page-top">Trang chủ</a></li>
+                <li class="sidebar-nav-item"><a href="/#about">Về Web</a></li>
+                <li class="sidebar-nav-item"><a href="/#services">Dịch vụ</a></li>
+                <li class="sidebar-nav-item" id="portfolio-nav">
+                    <a onclick="expand_nav();">Portfolio</a>
+                    <ul class="sidebar-nav-item" style="display:none;" id="more-nav-port">
+                        <li class="sidebar-nav-item"><a href="/#portfolio">Gần đây nhất</a></li>
+                        <li class="sidebar-nav-item"><a href="/Category/stories">Truyện</a></li>
+                        <li class="sidebar-nav-item"><a href="/Category/news">Tin tức</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav-item"><a href="#contact">Liên lạc</a></li>
+                <li class="sidebar-nav-item"><a href="/Beta_Story">Truyện thử nghiệm</a></li>
+                <li class="sidebar-nav-item"><a href="/creating_your_own/home.html">Tài khoản của tôi</a></li>
+            </ul>
+        </nav>
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-1">Hieu's diary</h1>
+                <h3 class="mb-5"><em>Blog của Hiếu - Những câu truyện lớp học</em></h3>
+                <a class="btn btn-primary btn-xl" href="#about">OH =)</a>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="content-section bg-light" id="about">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>Những câu truyện lớp học được trải nghiệm bởi chính tác giả</h2>
+                        <p class="lead mb-5">
+                            Bạn sẽ được nghe những câu truyện hay nhất đến từ vị trí của Hiếu xD !
+                        </p>
+                        <a class="btn btn-dark btn-xl" href="#services">Gét gô</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services-->
+        <section class="content-section bg-primary text-white text-center" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h3 class="text-secondary mb-0">Services</h3>
+                    <h2 class="mb-5">Những gì Hiếu mang đến</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
+                        <h4><strong>Bắt trend</strong></h4>
+                        <p class="text-faded mb-0">Những câu truyện đều được lấy cảm hứng từ drama lớp</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
+                        <h4><strong>Chân thực</strong></h4>
+                        <p class="text-faded mb-0">Những câu truyện có độ xác thực cao, bám sát thực tế</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
+                        <h4><strong>Cập nhật</strong></h4>
+                        <p class="text-faded mb-0">
+                            Thường xuyên, nhiều loại truyện
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
+                        <h4><strong>Lời văn</strong></h4>
+                        <p class="text-faded mb-0">Hay lắm :D</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio-->
+        <section class="content-section" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h3 class="text-secondary mb-0">Portfolio</h3>
+                    <h2 class="mb-5">Thông tin gần đây</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-6" id="news_col_6">
+                        <h3 class="text-info mb-5 text-center">Tin tức</h3>
+                    </div>
+
+                    <div class="col-lg-6" id="stories_col_6">
+                        <h3 class="text-info mb-5 text-center">Truyện</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Beta Story-->
+        <section class="content-section bg-primary text-white text-center" id="betastory">
+            <div class="container px-4 px-lg-5 justify-content-center align-items-center">
+                <div class="content-section-heading">
+                    <h3 class="text-secondary mb-0">Beta Stories</h3>
+                    <h2 class="mb-5">Những câu truyện chưa chính thức</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-6 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
+                        <h4><strong>Tự do sáng tạo</strong></h4>
+                        <p class="text-faded mb-0">Trải nghiệm những câu truyện mới hoặc tự viết ra câu truyện của riêng mình</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
+                        <h4><strong>Nhiều tác giả</strong></h4>
+                        <p class="text-faded mb-0">Nhiều tác giả khác nhau viết khiến cho nội dung luôn phong phú</p>
+                    </div>
+                    <p><br></p>
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-lg-10">
+                            <a class="btn btn-dark btn-xl" href="/Beta_Story">Triển luôn iem ei :3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <section id="contact">
+        <footer class="footer text-center">
+            <div class="container px-4 px-lg-5">
+                <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="https://fb.com/py.hacker.hieu"><i class="icon-social-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="https://github.com/MHP0920"><i class="icon-social-github"></i></a>
+                    </li>
+                </ul>
+                <p class="text-muted small mb-0">Copyright &copy; MHP 2022</p>
+            </div>
+        </footer>
+        </section>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="/js/connect_backend.js"></script>
+    </body>
+</html>
