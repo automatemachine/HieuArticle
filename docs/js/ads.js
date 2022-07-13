@@ -24,8 +24,5 @@ function load_ads() {
    ads_script.async = true;
    ads_script.crossorigin = 'anonymous';
    document.body.appendChild(ads_script);
-    ads_script.onload = function() {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    }
 }
 load_ads();
