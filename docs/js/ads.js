@@ -19,6 +19,13 @@ function load_ads() {
     ads_box.appendChild(link_ads);
     document.body.appendChild(ads_box);
     */
-   return;
+   ads_script = document.createElement('script');
+   ads_script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1882436229597341'
+   ads_script.async = true;
+   ads_script.crossorigin = 'anonymous';
+   document.body.appendChild(ads_script);
+    ads_script.onload = function() {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
 }
 load_ads();
