@@ -1,5 +1,5 @@
 function load_ads() {
-    ads_box = document.createElement('div');
+    /*ads_box = document.createElement('div');
     ads_box.id = 'ads_box';
     link_ads = document.createElement('a');
     link_ads.className = 'ads_link';
@@ -18,5 +18,7 @@ function load_ads() {
     link_ads.appendChild(ads_content);
     ads_box.appendChild(link_ads);
     document.body.appendChild(ads_box);
+    */
+   return;
 }
 load_ads();
