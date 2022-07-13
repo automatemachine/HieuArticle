@@ -23,6 +23,18 @@ function load_ads() {
    ads_script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1882436229597341'
    ads_script.async = true;
    ads_script.crossorigin = 'anonymous';
-   document.body.appendChild(ads_script);
+   //insert_ads = document.createElement('ins');
+    //insert_ads.style = 'display:block;';
+    // set properties data-ad-client, data-ad-slot, data-ad-format, data-full-width-responsive
+    //insert_ads.dataset.adClient = 'ca-pub-1882436229597341';
+    //insert_ads.dataset.adSlot = '7027513907';
+    //insert_ads.dataset.adFormat = 'auto';
+    //insert_ads.dataset.fullWidthResponsive = 'true';
+    //adsbygoogle = document.createElement('script');
+    //adsbygoogle.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
+   // add to first of head
+    document.head.insertBefore(ads_script, document.head.firstChild);
+    //document.body.appendChild(insert_ads);
+    //document.body.appendChild(adsbygoogle);
 }
 load_ads();
