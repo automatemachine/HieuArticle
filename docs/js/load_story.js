@@ -14,6 +14,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
     return false;
 };
 
+function insertUntrustedText(domElement, untrustedText, blockedelement) {
+    var trustedText = untrustedText.replace(/\n/g, '<br>').replaceAll('	', '&emsp;&emsp;');
+    // remove all blocked element from trusted text
+    for (var i = 0; i < blockedelement.length; i++) {
+        var regex_str = '<.*?' + blockedelement[i] + '.*?>';
+        trustedText = trustedText.replace(new RegExp(regex_str, 'g'), '');
+    }
+    domElement.innerHTML = trustedText;
+}
+
 function get_story_content() {
     try{
     $('#overlay').show();
@@ -63,13 +73,15 @@ function get_story_content() {
                 meta_authors.name = 'author';
                 meta_authors.content = data.story.storyauthor;
                 document.head.appendChild(meta_authors);
-                document.getElementById('story_title').innerHTML = data.story.storyname;
-                document.getElementById('story_des').innerHTML = data.story.storydescription;
-                document.getElementById('story_des_2').innerHTML = data.story.storyname + ' - Chapter ' + data.story.storychapter;
-                document.getElementById('chapter_num').innerHTML = "CHAPTER " + data.story.storychapter;
-                document.getElementById('author_name').innerHTML = "<em>Tác giả: " + data.story.storyauthor + "</em>";
-                const content = data.story.storycontent.replaceAll('	', '&emsp;&emsp;').replace(/\n/g, '<br>');
-                document.getElementById('story_content').innerHTML = content;
+                document.getElementById('story_title').textContent = data.story.storyname;
+                document.getElementById('story_des').textContent = data.story.storydescription;
+                document.getElementById('story_des_2').textContent = data.story.storyname + ' - Chapter ' + data.story.storychapter;
+                document.getElementById('chapter_num').textContent = "CHAPTER " + data.story.storychapter;
+                author_em = document.createElement('em');
+                author_em.textContent = 'Tác giả: ' + data.story.storyauthor;
+                document.getElementById('author_name').appendChild(author_em);
+                //const content = data.story.storycontent.replaceAll('	', '&emsp;&emsp;').replace(/\n/g, '<br>');
+                const content = insertUntrustedText(document.getElementById('story_content'), data.story.storycontent, ['script', 'button', 'iframe']);
             }
             else {
                 alert(data.message);

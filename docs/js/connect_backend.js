@@ -483,11 +483,11 @@ function get_beta_stories() {
                         div_2.appendChild(div_3);
                         div_4 = document.createElement('div');
                         div_4.className = 'h4';
-                        div_4.innerHTML = story.storyname + ' - ' + story.totalchapter + ' Chapter';
+                        div_4.textContent = story.storyname + ' - ' + story.totalchapter + ' Chapter';
                         div_3.appendChild(div_4);
                         p_1 = document.createElement('p');
                         p_1.className = 'mb-3 lead';
-                        p_1.innerHTML = story.storydescription;
+                        p_1.textContent = story.storydescription;
                         div_3.appendChild(p_1);
                         img_1 = document.createElement('img');
                         img_1.className = 'img-fluid';
