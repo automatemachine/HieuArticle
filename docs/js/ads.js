@@ -19,22 +19,20 @@ function load_ads() {
     ads_box.appendChild(link_ads);
     document.body.appendChild(ads_box);
     */
+   ads_title = document.createElement('h5');
+   ads_title.className = 'text-secondary text-center';
+   ads_title.innerHTML = '<b>Quảng cáo</b>';
    ads_script = document.createElement('script');
-   ads_script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1882436229597341'
-   ads_script.async = true;
+   ads_script.src = 'https://triflinguncertainforensic.com/011c7a0cbc6353a97334ba27d3c100ce/invoke.js';
+   ads_script.async = 'async';
+   ads_script.dataset.cfasync = 'false';
+   ads_div = document.createElement('div');
+   ads_div.id = 'container-011c7a0cbc6353a97334ba27d3c100ce';
    ads_script.crossorigin = 'anonymous';
-   //insert_ads = document.createElement('ins');
-    //insert_ads.style = 'display:block;';
-    // set properties data-ad-client, data-ad-slot, data-ad-format, data-full-width-responsive
-    //insert_ads.dataset.adClient = 'ca-pub-1882436229597341';
-    //insert_ads.dataset.adSlot = '7027513907';
-    //insert_ads.dataset.adFormat = 'auto';
-    //insert_ads.dataset.fullWidthResponsive = 'true';
-    //adsbygoogle = document.createElement('script');
-    //adsbygoogle.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
-   // add to first of head
-    document.head.insertBefore(ads_script, document.head.firstChild);
-    //document.body.appendChild(insert_ads);
-    //document.body.appendChild(adsbygoogle);
+   first_section = document.getElementsByTagName('section')[0];
+   // append after first section
+    first_section.parentNode.insertBefore(ads_div, first_section.nextSibling);
+    first_section.parentNode.insertBefore(ads_script, first_section.nextSibling);
+    first_section.parentNode.insertBefore(ads_title, first_section.nextSibling);
 }
 load_ads();

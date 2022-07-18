@@ -90,3 +90,39 @@ function expand_nav() {
         nav.style.display = "block";
     }
 }
+
+function expand_spec_nav(id) {
+    const nav = document.getElementById(id);
+    if (nav.style.display === "block") {
+        $("#" + id).fadeOut(500,'swing');
+    } else {
+        $("#" + id).fadeIn(500,'swing');
+        nav.style.display = "block";
+    }
+}
+
+function update_nav() {
+    const ul = document.querySelector('.sidebar-nav');
+    main_li = document.createElement('li');
+    main_li.className = "sidebar-nav-item";
+    expand_button = document.createElement('a');
+    expand_button.onclick = function() {expand_spec_nav("ex_nav")};
+    expand_button.innerHTML = "Policy";
+    ul1 = document.createElement('ul');
+    ul1.id = "ex_nav";
+    ul1.className = "sidebar-nav-item";
+    ul1.style.display = "none";
+    li1 = document.createElement('li');
+    li1.className = "sidebar-nav-item";
+    li1.innerHTML = "<a href='/policy/Privacy'>Quyền riêng tư</a>";
+    li2 = document.createElement('li');
+    li2.className = "sidebar-nav-item";
+    li2.innerHTML = "<a href='/policy/Terms_of_use'>Điều khoản sử dụng</a>";
+    ul1.appendChild(li1);
+    ul1.appendChild(li2);
+    main_li.appendChild(expand_button);
+    main_li.appendChild(ul1);
+    ul.appendChild(main_li);
+
+}
+update_nav();
